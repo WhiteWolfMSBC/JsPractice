@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- CSS Center = cssc;01 -->
+        <style>
+          body {
+            width: 90%;
+            height: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+          }
+          table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+td,
+th {
+  border: 2px solid #999;
+  padding: 0.5rem;
+}
+        </style>
+        <title>Fetch API rev 03.3</title>
+      </head>
+      
+      <body>
+        <h2>Fetch API Using Promises and GET REQUEST </h2>
+        <h3>Fetching Users data from JSON Array and Array Objects into Html Table</h3>
+      
+        <hr>
+        <div>
+          <a href="https://www.robertlgorman.com/JavaScript_Sandbox/JavaScript-Fetch-Promise-Json.html" target="_blank" rel="noopener noreferrer">* RG JS Fetch Promise Json *</a> |
+      
+          <a href="https://www.geeksforgeeks.org/get-and-post-method-using-fetch-api/?ref=rp" target="_blank" rel="noopener noreferrer">
+            *** Geeks Get and Post using Fetch ***</a> |
+      
+          <a href="https://css-tricks.com/complete-guide-table-element/" target="_blank" rel="noopener noreferrer">Table Styling CSS</a> |
+      
+          <a href="https://restfulapi.net/json-array/" target="_blank" rel="noopener noreferrer">Restful Api JSON Array</a>
+      
+          <br> <br>
+      
+          <a href="https://jsonplaceholder.typicode.com/users" target="_blank" rel="noopener noreferrer">
+            Json Data Placeholder Users 10</a> |
+      
+          <a href="https://medium.com/@armando_amador/how-to-make-http-requests-using-fetch-api-and-promises-b0ca7370a444" target="_blank" rel="noopener noreferrer">Fetch Api and Promises</a> |
+      
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener noreferrer">MDN Promise</a>
+          <br> <br>
+          <a href="https://mdn.github.io/simple-web-worker/" target="_blank" rel="noopener noreferrer">Web Workers Example</a>
+      
+          <hr>
+      
+          <!-- Table to display fetched user data -->
+          <table id="users"></table>
+        </div>
+      
+        <hr>
+      
+        <p>fetch() allows you to make network requests similar to XMLHttpRequest (XHR). The main difference is that the Fetch API uses Promises, which enables a simpler and cleaner API, avoiding callback hell and having to remember the complex API of XMLHttpRequest.</p>
+      
+        <h3>Last Updated:</h3>
+        <p>Tuesday December 21 2021 0714 AM</p>
+      
+        <!-- Link JavaScript file -->
+        <script>
+            // 1. GET request using fetch()
+fetch("https://jsonplaceholder.typicode.com/users")
+  // Converting received data to JSON
+  .then((response) => response.json())
+  .then((json) => {
+    
+  // 2. Create a variable to store HTML table headers
+    let li = `<tr><th>ID</th><th>Name</th><th>User Name</th><th>Email</th> <th>Phone</th><th>Website</th></tr>`;
+
+    // 3. Loop through each data and add a table row
+    json.forEach((user) => {
+      li += `<tr>
+        <td>${user.id}</td>
+        <td>${user.name} </td>
+        <td>${user.username}</td>
+        <td>${user.email}</td>
+        <td>${user.phone}</td>
+        <td>${user.website}</td>
+      </tr>`;
+    });
+
+    // 4. DOM Display result
+    document.getElementById("users").innerHTML = li;
+  });
+
+// main.js
+
+        </script>
+      </body>
+</html>

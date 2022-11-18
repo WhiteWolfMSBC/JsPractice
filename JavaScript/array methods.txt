@@ -1,0 +1,27 @@
+[
+{
+  "sno":2, "name": "Hitesh", "age": 30
+},
+]
+
+localStorgage.setItem("data", {
+  "sno":1, "name": "sachin", "age": 24
+});
+
+
+localStorgage.getItem("data")
+
+
+ADD (push, map)
+1) Array object -> push data into array
+2) save array object into localStorage
+
+Edit (find)
+1) read local Storage 
+2) find sno from local storage 
+3) display data
+
+Delete (find, pop, slice, splice)
+1) read local storage and store into one variable
+2) delete item from array of 1st step
+3) update local storage data with 2nd step

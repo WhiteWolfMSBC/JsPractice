@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const start = -4;
+const removedItems = fruits.splice(start);
+console.log(fruits);
+console.log(removedItems);
+
+
+
+const fruits1 = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const start1 = 2;
+const removedItems1 = fruits1.splice(start1);
+console.log(fruits1);
+console.log(removedItems1);
+
+
+
+const fruits2 = ['Apple', 'Strawberry', 'Cherry', 'Banana', 'Mango'];
+const start2 = 1;
+const deleteCount = 3;
+const removedItems2 = fruits2.splice(start2, deleteCount);
+console.log(fruits2);
+console.log(removedItems2);
+
+
+const fruits3 = ['Strawberry', 'Banana', 'Mango'];
+const start3 = fruits.indexOf('Banana');
+const deleteCount1 = 1;
+const removedItems3 = fruits3.splice(start3, deleteCount1);
+console.log(fruits3);
+console.log(removedItems3);
+
+
+const fruits4 = ['Apple', 'Banana', 'Strawberry', 'Mango'];
+const start4 = 1;
+const deleteCount2 = 2;
+const removedItems4 = fruits4.splice(start4, deleteCount4);
+console.log(fruits4);
+console.log(removedItems4);
+
+
+
+
+
+
+</script>
+<body>
+    
+</body>
+</html>

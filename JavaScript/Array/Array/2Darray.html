@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const values = [];
+for (let x = 0; x < 10; x++) {
+  values.push([
+    2 ** x,
+    2 * x ** 2,
+  ]);
+}
+console.table(values);
+
+
+
+
+function createArray(row,column) {
+let arr = [];
+
+for(var i=0; i<row; i++){
+    arr[i] = [Math.floor(Math.random() * (10))];
+
+    for(var j=0;j<column;j++){
+        arr[i][j]= [Math.floor(Math.random() * (20))];
+    }
+}
+
+return arr;
+}
+
+var arrVal = createArray(4, 5);
+
+console.log(arrVal);
+
+
+
+var x = new Array(10);
+
+for (var i = 0; i < x.length; i++) {
+  x[i] = new Array(3);
+}
+
+console.log(x);
+
+
+
+
+var gfg = new Array(2);
+  
+document.write("Creating 2D array <br>");
+  
+for (var i = 0; i < gfg.length; i++) {
+    gfg[i] = new Array(2);
+}
+  
+var h = 0;
+  
+for (var i = 0; i < 2; i++) {
+    for (var j = 0; j < 2; j++) {
+        gfg[i][j] = h++;
+    }
+}
+  
+for (var i = 0; i < 2; i++) {
+    for (var j = 0; j < 2; j++)    {
+        document.write(gfg[i][j] + " ");
+    }
+    document.write("<br>");
+} 
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<script>
+
+function getData(){
+    console.log("Started getData")
+    url = "https://jsonplaceholder.typicode.com/users";
+    fetch(url).then((response)=>{
+        console.log("Inside first then")
+        return response.json();
+    }).then((data)=>{
+        console.log("Inside second then")
+        console.log(data);
+    })
+}
+
+
+function postData(){
+    url = "https://jsonplaceholder.typicode.com/posts";
+    data = '{"name":"harglry347485945","salary":"123","age":"23"}'
+    params = {
+        method:'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: data
+    }
+    fetch(url, params).then(response=> response.json())
+    .then(data => console.log(data)
+    )
+}
+
+postData()
+</script>
+<body>
+    <button onclick="getData()">Try</button>
+    <button onclick="postData()">Try1</button>
+</body>
+</html>
